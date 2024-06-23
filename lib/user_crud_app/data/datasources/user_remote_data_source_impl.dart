@@ -11,24 +11,21 @@ class UserRemoteDataSourceImpl implements UserRemoteDataSource {
 
   @override
   Future<UserModel> addUser(UserModel user) async {
-    return await apiService.addUserDetails(user);
+    return await apiService.addUser(user);
   }
 
   @override
-  Future<void> deleteUser(int id) {
-    // TODO: implement deleteUser
-    throw UnimplementedError();
+  Future<void> deleteUser(int id) async {
+    return await apiService.deleteUser(id);
   }
 
   @override
-  Future<List<UserModel>> getUsers() {
-    // TODO: implement getUsers
-    throw UnimplementedError();
+  Future<List<UserModel>> getUsers() async {
+    return await apiService.getUsers();
   }
 
   @override
-  Future<void> updateUser(UserModel user) {
-    // TODO: implement updateUser
-    throw UnimplementedError();
+  Future<void> updateUser(UserModel user) async {
+    return await apiService.updateUser(user);
   }
 }
