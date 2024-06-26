@@ -64,6 +64,7 @@ dev_dependencies:
   build_runner: ^2.4.11
   json_serializable: ^6.8.0
   build_verify: any
+  icon_font_generator: ^4.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -92,10 +93,10 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
+  fonts:
+    - family: icon_font_generator Icons
+      fonts:
+        - asset: lib/fonts/my_icons_font.otf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
