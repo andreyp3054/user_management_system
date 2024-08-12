@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
+import 'package:user_crud/icons/my_icons.dart';
 import 'package:user_crud/user_crud_app/domain/entities/user.dart';
 import 'package:user_crud/user_crud_app/domain/presentation/bloc/user_bloc.dart';
-import '../../../core/di/injection_container.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -101,7 +101,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         color: Theme.of(context).colorScheme.primary),
                   ),
                 ),
-              )
+              ),
             ],
           ),
         ),
