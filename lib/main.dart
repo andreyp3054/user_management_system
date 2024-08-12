@@ -17,7 +17,6 @@ Future<void> main() async {
 
 final GoRouter _router = GoRouter(routes: $appRoutes);
 final Future<FirebaseApp> _initializedApp = Firebase.initializeApp(
-  name: "user_crud",
   options: DefaultFirebaseOptions.web,
 );
 
@@ -35,11 +34,7 @@ class MyApp extends StatelessWidget {
         future: _initializedApp,
         builder: (BuildContext context, AsyncSnapshot<FirebaseApp> snapshot) {
           if (snapshot.hasError) {
-            print(snapshot.error);
-            return const Text(
-              "Something went wrong. Please try again",
-              textDirection: TextDirection.ltr,
-            );
+            return const Text("Something went wrong. Please try again");
           } else if (snapshot.hasData) {
             return DynamicColorBuilder(
               builder: (ColorScheme? lightDynamic, ColorScheme? darkDynamic) {
